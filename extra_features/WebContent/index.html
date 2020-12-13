@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="ISO-8859-1">
+	<title>Index</title>
+</head>
+<style>
+body {
+	background-image: url('envelope.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+body #autum-container {
+	width: cover;
+	height: cover;
+	overflow: hidden;
+	position: relative;
+	perspective: 1800px;
+}
+h1 {
+	font-family: Fantasy;
+}
+.p1 {
+	font-family: Papyrus;
+}
+.icon-bar {
+	width: 100%;
+	background-color: transparent;
+	overflow: auto;
+}
+.icon-bar a {
+	float: left;
+  	width: 20%;
+  	text-align: center;
+  	padding: 12px 0;
+  	transition: all 0.3s ease;
+  	color: white;
+  	font-size: 20px;
+  	border-right: 2px solid #000;
+}
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #FFB6C1;
+}
+@keyframes sway { 
+	0% { 
+		transform: rotateZ(-15deg) rotateX(55deg);
+	}
+    30% {
+		transform: rotateZ(20deg) rotateX(60deg);
+		animation-timing-function: ease-in-out;
+	}
+	60% { 
+		transform: rotateZ(-20deg) rotateX(55deg);
+		animation-timing-function: ease-in-out;
+	}
+    100% {
+		transform: rotateZ(0deg) rotateX(58deg);
+		animation-timing-function: cubic-bezier(0.990, 0.000, 0.890, 0.435);
+		}
+}
+@keyframes fall { 
+	60% {
+		filter: drop-shadow(0px 60px 40px rgba(0,0,0,0));
+	}
+	100% {
+		margin-top: 500px;
+		filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
+	}
+}
+img[alt="autumn leaf"] {
+	position: absolute;
+	width: 33%;
+	transform-origin: 0px -400px 200px;
+	animation-name: fall, sway;
+	animation-duration: 7s, 8s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+	animation-timing-function: linear, ease-in-out;
+}
+</style>
+<body id = "autumn-container">
+	<img src="leaf.jpg" alt="autumn leaf" style="top: -60px;">
+	<img src="leaf.jpg" alt="autumn leaf" style="top: -45px; left: 300px; animation-delay: 2s;">
+	<img src="leaf.jpg" alt="autumn leaf" style="width: 28%; top: -122px; left: 110px; animation-delay: 3.2s;">
+	<img src="leaf.jpg" alt="autumn leaf" style="width: 35%; top: -55px; left: 198px; animation-delay: 4.4s;">
+	<img src="leaf.jpg" alt="autumn leaf" style="width: 38%; top: -18px; left: 560px; animation-delay: 2.25s;">
+	<img src="leaf.jpg" alt="autumn leaf" style="width: 33%; top: 0px; left: 401px; animation-delay: 3.8s;">
+		
+	<h1>Admin Login</h1><hr>
+	<div class = "icon-bar">
+		<a class = "active" href = "index.html"><i class = "fa fa-home"></i></a>
+		<a href = "student_info.jsp" class = "p1">Student Info</a>
+		<a href = "addStudent.jsp" class = "p1">Add Student</a>
+	</div>
+	<p class = p1>Please enter your ID and password:<p>
+	<form action = "Login" method = "post">
+		<label for = "id" class = "p1">Admin ID:</label><br>
+		<input type = "text" id = "id" class = "p1" name = "id"><br><br>
+		
+		<label for = "password" class = "p1">Password:</label><br>
+		<input type="text" id="password" class = "p1" name="password"><br><br>
+		
+		<input type = "submit" class = "p1" value = "Login"/>
+		<button type = "reset" class = "p1">Reset</button>
+	</form>
+</body>
+</html>
