@@ -74,24 +74,29 @@ h1 {
 		filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.6));
 	}
 }
-img[alt="autumn leaf"] {
-	position: absolute;
-	width: 33%;
-	transform-origin: 0px -400px 200px;
+.autumnleaf {
+	width:35px;
+	height:35px;
+  	position:absolute;
+  	transform-origin: 0px -400px 200px;
 	animation-name: fall, sway;
 	animation-duration: 7s, 8s;
 	animation-iteration-count: infinite;
 	animation-fill-mode: both;
 	animation-timing-function: linear, ease-in-out;
+  	background: url(http://www.clipartqueen.com/image-files/red-lobed-fall-clipart-leaf.png);
+  	background-size: 100% 100%;
 }
 </style>
 <body id = "autumn-container">
-	<img src="leaf.jpg" alt="autumn leaf" style="top: -60px;">
-	<img src="leaf.jpg" alt="autumn leaf" style="top: -45px; left: 300px; animation-delay: 2s;">
-	<img src="leaf.jpg" alt="autumn leaf" style="width: 28%; top: -122px; left: 110px; animation-delay: 3.2s;">
-	<img src="leaf.jpg" alt="autumn leaf" style="width: 35%; top: -55px; left: 198px; animation-delay: 4.4s;">
-	<img src="leaf.jpg" alt="autumn leaf" style="width: 38%; top: -18px; left: 560px; animation-delay: 2.25s;">
-	<img src="leaf.jpg" alt="autumn leaf" style="width: 33%; top: 0px; left: 401px; animation-delay: 3.8s;">
+	<div class = "autumnleaf" style="top: -60px;"></div>
+	<div class = "autumnleaf" style="top: -45px; left: 300px; animation-delay: 2s;"></div>
+	<div class = "autumnleaf" style="top: -122px; left: 100px; animation-delay: 3.2s;"></div>
+	<div class = "autumnleaf" style="top: -55px; left: 200px; animation-delay: 4.4s;"></div>
+	<div class = "autumnleaf" style="top: -18px; left: 550px; animation-delay: 2.25s;"></div>
+	<div class = "autumnleaf" style="top: -10px; left: 600px; animation-delay: 3.8s;"></div>
+	<div class = "autumnleaf" style="top: -22px; left: 650px; animation-delay: 4.0s;"></div>
+	<div class = "autumnleaf" style="top: -33px; left: 700px; animation-delay: 3.0s;"></div>
 		
 	<h1>Admin Login</h1><hr>
 	<div class = "icon-bar">
